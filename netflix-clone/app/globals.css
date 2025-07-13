@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #141414;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141414;
+    --foreground: #ededed;
+  }
+}
+
+.open-sans-nfc {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.playwrite-vn-guides-regular {
+  font-family: "Playwrite VN Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Playwrite VN Guides", "Open Sans", sans-serif, Arial, Helvetica, sans-serif;
+}
